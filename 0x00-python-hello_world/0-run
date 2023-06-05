@@ -4,4 +4,4 @@
 pyfile=$PYFILE
 
 # Run the Python script
-python "$pyfile"
+python3 "$pyfile"
