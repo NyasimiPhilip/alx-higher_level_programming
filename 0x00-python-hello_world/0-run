@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Get the Python file name from the environment variable
+pyfile=$PYFILE
+
+# Run the Python script
+python "$pyfile"
