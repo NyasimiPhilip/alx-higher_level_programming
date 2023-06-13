@@ -1,9 +1,5 @@
 #!/usr/bin/python3
 # 5-no_c.py
 def no_c(my_string):
-    new_string = ""
-    for i in range(len(my_string)):
-        if my_string[i] in ["c", "C"]:
-            continue
-        new_string+= my_string[i]
-        return (new_string)
+    copy = [x for x in my_string if x != 'c' and x != 'C']
+    return ("".join(copy))
