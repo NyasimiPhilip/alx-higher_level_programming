@@ -6,37 +6,39 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *trav = *head;
-	int i = 0, len;
-	int a , b;
-	int *mylist;
-	int reversedList[100];
 	if (*head == NULL)
 	{
 		return (1);
 	}
-	mylist = malloc(sizeof(int *));
-	if (mylist == NULL)
+	listint_t *slow = *head;
+	listint_t *fast = *head;
+
+	while (fast != NULL && fast->next != NULL)
 	{
-		return (0);
+		slow = slow->next;
+		fast = fast->next->next;
 	}
-	while (trav->next != NULL)
+	listint_t *prev = NULL;
+	listint_t *curr = slow->next;
+
+	while (curr != NULL)
 	{
-		mylist[i] = trav->n;
-		i++;
-		trav = trav->next;
+		listint_t *next = curr->next;
+
+		curr->next = prev;
+		prev = curr;
+		curr = next;
 	}
-	mylist[i] = trav->n;
-	len = i + 1;
-	for (a = len - 1, b = 0; a >= 0; a--, b++) {
-		reversedList[b] = mylist[a];
-	}
-	for (a = 0; a < len; a++)
+	listint_t *first = *head;
+
+	while (prev != NULL)
 	{
-		if (mylist[a] != reversedList[a])
+		if (first->data != prev->data)
 		{
 			return (0);
 		}
+		first = first->next;
+		prev = prev->next;
 	}
-	return (1);	        
+	return (1);
 }
