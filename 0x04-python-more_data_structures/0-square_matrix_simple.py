@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 def square_matrix_simple(matrix=[]):
     # Use nested map functions to iterate over rows and elements in each row,
     # and compute the square of each element
