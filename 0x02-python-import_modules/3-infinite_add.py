@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 # 3-infinite_add.py
+from sys import argv
 if __name__ == "__main__":
-    import sys
-    result = 0
-    for i, args in enumerate(sys.argv):
-        if i == 0:
-            continue
-        sum += int(args)
-    print(f"{sum:d}")
+    total = 0
+    fh = len(argv) - 1
+    for j in range(1, fh + 1):
+        total += int(argv[j])
+    print(total)
