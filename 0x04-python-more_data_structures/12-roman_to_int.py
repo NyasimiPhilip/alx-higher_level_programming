@@ -1,33 +1,27 @@
 #!/usr/bin/python3
 # 12-roman_to_int.py
-def roman_value(char):
-    if char == 'I':
-        return 1
-    if char == 'V':
-        return 5
-    if char == 'X':
-        return 10
-    if char == 'L':
-        return 50
-    if char == 'C':
-        return 100
-    if char == 'D':
-        return 500
-    if char == 'M':
-        return 1000
-        return -1
 def roman_to_int(roman_string):
-    if (not roman_string) or \
-            type(roman_string) != str:
-                return None
-    number = 0
+    if not isinstance(roman_string, str) or roman_string is None:
+        return 0
+
+    roman_dict = {
+        "I": 1,
+        "V": 5,
+        "X": 10,
+        "L": 50,
+        "C": 100,
+        "D": 500,
+        "M": 1000
+    }
+    num = 0
+
     for i in range(len(roman_string)):
-        if i + 1 < len(roman_string):
-            if roman_value(roman_string[i]) \
-                    >= roman_value(roman_string[i + 1]):
-                number += roman_value(roman_string[i])
-            else:
-                number -= roman_value(roman_string[i])
-            else:
-                number += roman_value(roman_string[i])
-    return number
+        if roman_string[i] not in roman_dict:
+            return 0
+
+        if i != len(roman_string) - 1 and roman_dict[roman_string[i]] < roman_dict[roman_string[i + 1]]:
+            num -= roman_dict[roman_string[i]]
+        else:
+            num += roman_dict[roman_string[i]]
+
+    return num
