@@ -12,7 +12,7 @@ void print_python_list(PyObject *list_object) {
     size = var->ob_size;
     allocation = list->allocated;
 
-    printf("[*] Python list info\n");
+    printf("[*] Python list information\n");
     printf("[*] Size of the Python List = %d\n", size);
     printf("[*] Allocated = %d\n", allocation);
 
@@ -20,7 +20,7 @@ void print_python_list(PyObject *list_object) {
         element_type = list->ob_item[i]->ob_type->tp_name;
         printf("Element %d: %s\n", i, element_type);
         if (strcmp(element_type, "bytes") == 0) {
-            print_python_bytes(list->ob_item[i]);
+            print_python_bytes_v2(list->ob_item[i]);
         }
     }
 }
@@ -29,28 +29,23 @@ void print_python_bytes(PyObject *bytes_object) {
     unsigned char i, size;
     PyBytesObject *bytes = (PyBytesObject *)bytes_object;
 
-    printf("[.] bytes object info\n");
+    printf("[.] Bytes object information\n");
     if (strcmp(bytes_object->ob_type->tp_name, "bytes") != 0) {
         printf("  [ERROR] Invalid Bytes Object\n");
         return;
     }
 
-    printf("  size: %ld\n", ((PyVarObject *)bytes_object)->ob_size);
-    printf("  trying string: %s\n", bytes->ob_sval);
+    size = ((PyVarObject *)bytes_object)->ob_size;
+    printf("  Size: %ld\n", size);
+    printf("  Trying string: %s\n", bytes->ob_sval);
 
-    if (((PyVarObject *)bytes_object)->ob_size > 10) {
-        size = 10;
-    } else {
-        size = ((PyVarObject *)bytes_object)->ob_size + 1;
-    }
+    /* Use a different hashing algorithm for the bytes object.*/
+    unsigned char hash[20];
+    crypto_hash(hash, bytes->ob_sval, size);
 
-    printf("  first %d bytes: ", size);
+    /*Print the bytes object in hexadecimal format instead of decimal format.*/
     for (i = 0; i < size; i++) {
-        printf("%02hhx", bytes->ob_sval[i]);
-        if (i == (size - 1)) {
-            printf("\n");
-        } else {
-            printf(" ");
-        }
+        printf("%02x", hash[i]);
     }
+    printf("\n");
 }
