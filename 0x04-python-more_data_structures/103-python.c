@@ -20,7 +20,7 @@ void print_python_list(PyObject *list_object) {
         element_type = list->ob_item[i]->ob_type->tp_name;
         printf("Element %d: %s\n", i, element_type);
         if (strcmp(element_type, "bytes") == 0) {
-            print_python_bytes_v2(list->ob_item[i]);
+            print_python_bytes(list->ob_item[i]);
         }
     }
 }
@@ -35,17 +35,22 @@ void print_python_bytes(PyObject *bytes_object) {
         return;
     }
 
-    size = ((PyVarObject *)bytes_object)->ob_size;
-    printf("  Size: %ld\n", size);
+    printf("  Size: %ld\n", ((PyVarObject *)bytes_object)->ob_size);
     printf("  Trying string: %s\n", bytes->ob_sval);
 
-    /* Use a different hashing algorithm for the bytes object.*/
-    unsigned char hash[20];
-    crypto_hash(hash, bytes->ob_sval, size);
-
-    /*Print the bytes object in hexadecimal format instead of decimal format.*/
-    for (i = 0; i < size; i++) {
-        printf("%02x", hash[i]);
+    if (((PyVarObject *)bytes_object)->ob_size > 10) {
+        size = 10;
+    } else {
+        size = ((PyVarObject *)bytes_object)->ob_size + 1;
     }
-    printf("\n");
+
+    printf("  First %d bytes: ", size);
+    for (i = 0; i < size; i++) {
+        printf("%02hhx", bytes->ob_sval[i]);
+        if (i == (size - 1)) {
+            printf("\n");
+        } else {
+            printf(" ");
+        }
+    }
 }
