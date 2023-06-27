@@ -12,7 +12,7 @@ def list_division(my_list_1, my_list_2, list_length):
             quotient = 0
         except IndexError:
             print("out of range")
-            quoitient = 0
+            quotient = 0
         finally:
             new_l.append(quotient)
     return (new_l)
