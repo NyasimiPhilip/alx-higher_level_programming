@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 # 2-square.py
+"""creating a new class"""
+
 class Square:
     """Represent a square."""
 
