@@ -10,4 +10,4 @@ def magic_calculation(a, b):
         except Exception:
             count = b + a
             break
-    return count
+    return (count)
