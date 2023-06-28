@@ -2,9 +2,8 @@
 """creating a new class"""
 
 class Square:
-  """
-    new Square class
-    """
+  """new Square class"""
+  
     def __init__(self, size):
        """Initialize a new square."""
         self.__size = size
