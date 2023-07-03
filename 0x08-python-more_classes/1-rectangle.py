@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 # 1-rectangle.pyclass Rectangle:class Rectangle:
+"""
+Real Definition of a rectangle
+"""
   class Rectangle:
     """Represents a rectangle."""
 
