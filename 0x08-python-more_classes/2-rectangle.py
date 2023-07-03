@@ -2,33 +2,36 @@
 # 2-rectangle.py
 """Defines a Rectangle class."""
 class Rectangle:
-    """Represent a rectangle."""
     def __init__(self, width=0, height=0):
-        self.set_width(width)
-        self.set_height(height)
+        self.width = width
+        self.height = height
 
-    def get_width(self):
+    @property
+    def width(self):
         return self.__width
 
-    def set_width(self, value):
+    @width.setter
+    def width(self, value):
         if not isinstance(value, int):
-            raise TypeError("Width must be an integer")
+            raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError("Width must be a non-negative integer")
+            raise ValueError("width must be >= 0")
         self.__width = value
 
-    def get_height(self):
+    @property
+    def height(self):
         return self.__height
 
-    def set_height(self, value):
+    @height.setter
+    def height(self, value):
         if not isinstance(value, int):
-            raise TypeError("Height must be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("Height must be a non-negative integer")
+            raise ValueError("height must be >= 0")
         self.__height = value
 
     def area(self):
-        return self.get_width() * self.get_height()
+        return self.width * self.height
 
     def perimeter(self):
-        return (self.get_width() + self.get_height()) * 2
+        return 2 * (self.width + self.height)
