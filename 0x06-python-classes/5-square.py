@@ -2,16 +2,16 @@
 """creating a new class"""
 
 class Square:
-  """new Square class"""
-  
+    """new Square class"""
+
     def __init__(self, size):
-       """Initialize a new square."""
+        """Initialize a new square."""
         self.__size = size
 
     @property
     def size(self):
-      """function to retrieve value of size"""
-        return (self.__size)
+        """function to retrieve value of size"""
+        return self.__size
 
     @size.setter
     def size(self, value):
@@ -22,11 +22,11 @@ class Square:
         self.__size = value
     
     def area(self):
-      """Return the area."""
-      return self.__size ** 2
+        """Return the area."""
+        return self.__size ** 2
 
     def my_print(self):
-      """function that prints square with # symbols"""
+        """function that prints square with # symbols"""
         if self.__size == 0:
             print("")
         else:
