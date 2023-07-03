@@ -1,4 +1,7 @@
-class Rectangle:
+#!/usr/bin/python3
+# 1-rectangle.pyclass Rectangle:
+ """Defines a Rectangle class."""
+ class Rectangle:
     def __init__(self, width=0, height=0):
         self.set_width(width)
         self.set_height(height)
