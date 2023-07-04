@@ -1,3 +1,8 @@
+#!/usr/bin/python3
+
+"""
+Real Definition of a rectangle
+"""
 class Rectangle:
     """
     Defines a rectangle.
