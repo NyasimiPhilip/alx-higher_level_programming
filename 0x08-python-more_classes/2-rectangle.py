@@ -2,6 +2,8 @@
 # 2-rectangle.py
 """Defines a Rectangle class."""
 class Rectangle:
+    """Class rectangle"""
+    
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
