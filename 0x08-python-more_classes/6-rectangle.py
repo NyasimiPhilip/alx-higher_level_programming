@@ -6,7 +6,7 @@ Rectangle Class Definition
 
 
 class Rectangle:
-    """Custom class representing a rectangle"""
+    """class representing a rectangle"""
 
     instance_count = 0
 
@@ -19,7 +19,7 @@ class Rectangle:
         """
         self._width = width
         self._height = height
-        CustomRectangle.instance_count += 1
+        Rectangle.instance_count += 1
 
     @property
     def width(self):
@@ -81,9 +81,9 @@ class Rectangle:
 
     def __repr__(self):
         """Return a string representation of the rectangle object"""
-        return "CustomRectangle({}, {})".format(self._width, self._height)
+        return "Rectangle({}, {})".format(self._width, self._height)
 
     def __del__(self):
         """Destructor for the rectangle object"""
         Rectangle.instance_count -= 1
-        print("Deleting the Rectangle instance...")
+        print("Bye rectangle...")
