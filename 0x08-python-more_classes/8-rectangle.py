@@ -3,7 +3,10 @@
 """
 Real Definition of a rectangle
 """
+
+
 class Rectangle:
+
     """
     Defines a rectangle.
     """

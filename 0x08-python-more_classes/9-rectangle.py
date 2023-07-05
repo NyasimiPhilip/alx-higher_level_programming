@@ -3,6 +3,8 @@
 """
 Real Definition of a rectangle
 """
+
+
 class Rectangle:
     """
     Defines a rectangle.
@@ -95,7 +97,8 @@ class Rectangle:
         Returns:
             int: The perimeter of the rectangle.
         """
-        return 0 if self.__width == 0 or self.__height == 0 else 2 * (self.__width + self.__height)
+        return 0 if self.__width == 0 or self.__height == 0 \
+            else 2 * (self.__width + self.__height)
 
     def __str__(self):
         """
@@ -113,7 +116,8 @@ class Rectangle:
 
     def __repr__(self):
         """
-        Returns a string representation of the rectangle that can be used to recreate the object.
+        Returns a string representation of the rectangle
+        that can be used to recreate the object.
 
         Returns:
             str: The string representation of the rectangle.
