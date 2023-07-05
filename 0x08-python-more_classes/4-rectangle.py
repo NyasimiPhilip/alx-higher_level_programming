@@ -3,6 +3,8 @@
 """
 Real Definition of a rectangle
 """
+
+
 class Rectangle:
     """
     Real Definition of a rectangle
@@ -110,7 +112,7 @@ class Rectangle:
         for i in range(self._height):
             rect += ("#" * self._width + '\n')
         return rect[:-1]
-    
+
     def __repr__(self):
         """
         Returns a string representation of the rectangle.
