@@ -75,7 +75,6 @@ class Rectangle:
         """
         if self._width == 0 or self._height == 0:
             return ""
-        
         rect = []
         for _ in range(self._height):
             rect.append("#" * self._width)
@@ -88,4 +87,3 @@ class Rectangle:
     def __del__(self):
         """Print a message for every deletion of a Rectangle."""
         print("Bye rectangle...")
-

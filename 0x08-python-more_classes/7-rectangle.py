@@ -2,6 +2,8 @@
 # 7-rectangle.py
 """
 Real Definition of a rectangle"""
+
+
 class Rectangle:
     """Class representing a rectangle"""
 
@@ -74,10 +76,10 @@ class Rectangle:
         return 2 * (self._height + self._width)
 
     def __str__(self):
-        """Return a string representation of the rectangle"""
         if self._height == 0 or self._width == 0:
             return ""
-        return "\n".join([str(self.print_symbol) * self._width for _ in range(self._height)])
+        return "\n".join(
+                ["#" * self._width for _ in range(self._height)])
 
     def __repr__(self):
         """Return a string representation of the rectangle object"""
