@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 """
-A class that inherits from the list class.
+class  that inherits from list
 """
 
-class SortedList(list):
-"""
-A class that inherits from the list class
-"""
-def print_sorted(self):
-    """
-    A function that returns the sorted list.
-    """
-    sorted_list = sorted(self)
-    return sorted_list
+
+class MyList(list):
+    """class that inherits from list"""
+
+    def print_sorted(self):
+        """
+        func that returns sorted list
+        """
+        sorted_list = sorted(self)
+        return(sorted_list)
