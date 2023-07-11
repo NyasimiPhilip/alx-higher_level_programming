@@ -7,7 +7,6 @@ Rectangle = __import__('9-rectangle').Rectangle
 class Square(Rectangle):
     """
     Represents a square.
-    
     Attributes:
         __size (int): The size of the square.
     """
