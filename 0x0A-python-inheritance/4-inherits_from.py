@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 """Function to validate if obj is an instance of a_class"""
 
-
 def inheritance_from(obj, a_class):
-
     """
     Function to validate if obj is an instance of a_class
     Args:
