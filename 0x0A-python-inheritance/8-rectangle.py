@@ -2,7 +2,6 @@
 """Defines the Rectangle class."""
 BaseGeometry = import('7-base_geometry').BaseGeometry
 
-
 class Rectangle(BaseGeometry):
     """Represents a rectangle."""
 
