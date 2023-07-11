@@ -1,14 +1,11 @@
 #!/usr/bin/python3
 
 """class Rectangle"""
-BaseGeometry = import('7-base_geometry').BaseGeometry
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """Represents a rectangle.
-    Attributes:__width (int): The width of the rectangle.
-    __height (int): The height of the rectangle.
-    """
+    """class Rectangle"""
 
     def __init__(self, width, height):
         """Initializes a Rectangle object.
