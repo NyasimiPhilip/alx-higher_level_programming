@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-This script defines the Rectangle class.
-"""
+"""This script defines the Rectangle class."""
 BaseGeometry = import('7-base_geometry').BaseGeometry
 
 
