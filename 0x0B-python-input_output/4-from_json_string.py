@@ -6,10 +6,8 @@ import json
 
 def from_json_string(my_str):
     """Converts a JSON string to an object.
-    
     Args:
         my_str (str): The JSON string.
-        
     Returns:
         obj: The converted object.
     """
