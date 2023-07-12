@@ -7,10 +7,8 @@ import json
 
 def load_from_json_file(filename):
     """Loads JSON data from a file.
-    
     Args:
         filename (str): The name of the file.
-        
     Returns:
         obj: The loaded JSON object.
     """
