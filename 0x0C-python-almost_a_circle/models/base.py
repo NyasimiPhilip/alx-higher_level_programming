@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-
+"""Importing json module"""
 import json
+"""class Base"""
 
 
 class Base:
+    """class Base"""
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -77,4 +79,3 @@ class Base:
         rect = Rectangle(12, 21, 32, 43, 55)  # Create a 'Rectangle' object with default values
         rect.update(**dictionary)  # Update the 'Rectangle' object with values from the 'dictionary' parameter
         return rect
-
