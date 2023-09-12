@@ -10,7 +10,7 @@ if (args.length <= 3) {
   // If there are 0, 1, or 2 arguments (including script name and Node.js executable),
   // there can't be a second biggest integer, so print 0.
   console.log(0);
-} else if (args.length == 4) {
+} else if (args.length === 4) {
   // If there are exactly 4 arguments, compare the first two (index 2 and 3) as numbers.
   // Print the smaller one because it is the second biggest integer.
   Number(args[2]) > Number(args[3]) ? console.log(args[3]) : console.log(args[2]);
