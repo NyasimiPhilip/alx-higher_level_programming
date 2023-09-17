@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-This script takes the name of a state as an argument and lists all cities of that
+This script takes the name of a state as
+an argument and lists all cities of that
 state, using the database `hbtn_0e_4_usa`.
 """
 
 import MySQLdb as db
 from sys import argv
-
 if __name__ == "__main__":
     """
     Establish a connection to the MySQL database and retrieve cities
@@ -36,7 +36,6 @@ if __name__ == "__main__":
         """, {
             'state_name': argv[4]
         })
-        
         # Fetch all rows selected by the query
         rows_selected = db_cursor.fetchall()
 
