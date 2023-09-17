@@ -1,14 +1,16 @@
 #!/usr/bin/python3
 """
-This script takes arguments and displays all values in the 'states' table of 'hbtn_0e_0_usa'
-where the name matches the argument, using a safe query to prevent MySQL injection.
+This script takes arguments and displays all values
+in the 'states' table of 'hbtn_0e_0_usa'
+where the name matches the argument, using a safe query
+to prevent MySQL injection.
 """
 
 if __name__ == "__main__":
     import sys
     import MySQLdb
 
-    # Get command-line arguments for database user, password, database name, and state name
+    # Get command-line arguments
     dbUser = sys.argv[1]
     pswd = sys.argv[2]
     dbName = sys.argv[3]
@@ -16,8 +18,11 @@ if __name__ == "__main__":
 
     try:
         # Establish a connection to the MySQL database
-        db = MySQLdb.connect(host='localhost', user=dbUser, passwd=pswd, db=dbName)
-
+        db = My db = MySQLdb.connect(
+                host='localhost',
+                user=dbUser,
+                passwd=pswd,
+                db=dbName)
         # Create a cursor object to interact with the database
         cur = db.cursor()
 
