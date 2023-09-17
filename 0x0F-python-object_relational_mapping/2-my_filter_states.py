@@ -25,8 +25,8 @@ if __name__ == "__main__":
     # Create a cursor object to interact with the database
     cur = db.cursor()
 
-    # Execute the query, passing stateName as a parameter to avoid SQL injection
-    cur.execute(query, (stateName,))
+    # Execute the query
+    cur.execute(query)
 
     # Fetch all rows that match the query
     rows = cur.fetchall()
