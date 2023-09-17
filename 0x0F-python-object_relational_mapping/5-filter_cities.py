@@ -8,7 +8,9 @@ if __name__ == "__main__":
 
     # Check if the correct number of command-line arguments is provided
     if len(sys.argv) != 5:
-        print("Usage: python script.py <db_user> <db_password> <db_name> <state_name>")
+        usage = "Usage: python script.py <db_user> <db_password> " \
+                "<db_name> <state_name>"
+        print(usage)
         sys.exit(1)
 
     dbUser = sys.argv[1]
