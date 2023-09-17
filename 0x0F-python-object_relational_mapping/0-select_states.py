@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     cur = db.cursor()
 
-    # Execute a query to retrieve all states, ordered by their IDs in ascending order
+    # Execute a query to retrieve all states
     cur.execute("SELECT * FROM states ORDER BY states.id ASC")
 
     # Get the result of the previous query execution
