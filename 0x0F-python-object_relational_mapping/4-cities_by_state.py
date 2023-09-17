@@ -1,35 +1,27 @@
 #!/usr/bin/python3
-"""Script that lists all cities from a database."""
+"""
+This script lists all cities from
+the database `hbtn_0e_4_usa`.
+"""
 
-if __name__ == "__main__":
-    import sys
-    import MySQLdb
+import MySQLdb
+import sys
 
-    # Extract command line arguments
-    dbUser = sys.argv[1]
-    pswd = sys.argv[2]
-    dbName = sys.argv[3]
+if __name__ == '__main__':
+    """
+    Access the database and get the cities
+    from the database.
+    """
 
-    # Establish a connection to the MySQL database
-    db = MySQLdb.connect(host='localhost', user=dbUser, passwd=pswd, db=dbName)
+    db_connect = MySQLdb.connect(host="localhost", port=3306,
+                                 user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
 
-    # Create a cursor object to interact with the database
-    cur = db.cursor()
+    with db_connect.cursor() as db_cursor:
+        db_cursor.execute("SELECT cities.id, cities.name, states.name \
+                                FROM cities JOIN states ON cities.state_id \
+                                = states.id ORDER BY cities.id ASC")
+        rows_selected = db_cursor.fetchall()
 
-    # Define the SQL query to retrieve all rows
-    # from the 'cities' table, ordered by 'id' in ascending order
-    query = "SELECT * FROM cities ORDER BY cities.id ASC"
-
-    # Execute the SQL query
-    cur.execute(query)
-
-    # Fetch all rows from the result set
-    rows = cur.fetchall()
-
-    # Iterate through the rows and print each row
-    for row in rows:
-        print(row)
-
-    # Close the cursor and database connection to free up resources
-    cur.close()
-    db.close()
+    if rows_selected is not None:
+        for row in rows_selected:
+            print(row)
