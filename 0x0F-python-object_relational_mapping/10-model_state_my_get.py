@@ -9,17 +9,19 @@ from model_state import State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
+
 def main():
     """
-    Access the database and retrieve the ID of the specified state from the database.
+    Access the database and retrieve the ID of the
+    specified state from the database.
     """
     try:
         # Database connection URL using f-strings
         db_url = (
             f"mysql+mysqldb://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}"
-        )        
+        )
         # Create a database engine
-        engine = create_engine(db_url)        
+        engine = create_engine(db_url)
         # Create a session
         Session = sessionmaker(bind=engine)
         session = Session()
@@ -34,6 +36,7 @@ def main():
         session.close()
     except Exception as e:
         print(f"An error occurred: {e}")
+
 
 if __name__ == "__main__":
     main()
