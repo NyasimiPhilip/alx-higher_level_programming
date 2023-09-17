@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 """
-This script lists all states with a name starting with 'N' (uppercase 'N') from a MySQL database.
+This script lists all states with a name starting with 'N'
+(uppercase 'N') from a MySQL database.
 """
 
 if __name__ == "__main__":
     # Import necessary libraries
     import sys
     import MySQLdb
-    # Get the command-line arguments for database user, password, and database name
+    # Get the command-line arguments
     dbUser = sys.argv[1]
     pswd = sys.argv[2]
     dbName = sys.argv[3]
