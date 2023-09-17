@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     try:
         # Establish a connection to the MySQL database
-        db = My db = MySQLdb.connect(
+        db = MySQLdb.connect(
                 host='localhost',
                 user=dbUser,
                 passwd=pswd,
