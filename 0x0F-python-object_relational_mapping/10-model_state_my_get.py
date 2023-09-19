@@ -1,42 +1,38 @@
 #!/usr/bin/python3
+"""Script that prints the State object with the name
+passed as an argument from the database hbtn_0e_6_usa
 """
-This script prints the ID of the State object with the name
-passed as an argument from the database hbtn_0e_6_usa.
-"""
-
 import sys
 from sqlalchemy import create_engine
-from model_state import State, Base
+from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 
 
 def main():
-<<<<<<< HEAD
-    """
-    Access the database and retrieve the ID of the
-    specified state from the database.
-    """
-    try:
-        # Database connection URL using f-strings
-        db_url = (
-            f"mysql+mysqldb://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}"
-        )
-        # Create a database engine
-        engine = create_engine(db_url)
-        # Create a session
-        Session = sessionmaker(bind=engine)
-        session = Session()
-        # Query and retrieve the ID of the specified state
-        state_name = argv[4]
-        state = session.query(State).filter(State.name == state_name).first()
-        if state:
-            print(f"{state.id}")
-        else:
-            print("Not found")
-        # Close the session
-        session.close()
-    except Exception as e:
-        print(f"An error occurred: {e}")
+    if len(sys.argv) != 5:
+        print("Usage: python script.py <db_user> <db_password> "
+              "<db_name> <state_name>")
+        return
+
+    dbUser = sys.argv[1]
+    dbPwd = sys.argv[2]
+    dbName = sys.argv[3]
+    state_name = sys.argv[4]
+
+    engine = create_engine(
+            f"mysql://{dbUser}:{dbPwd}@localhost:3306/{dbName}")
+    Session = sessionmaker(bind=engine)
+    session = Session()
+
+    result = (session.query(State).filter(State.name == state_name).
+              order_by(State.id.asc()).all())
+
+    if len(result) != 0:
+        for state in result:
+            print(state.id)
+    else:
+        print("Not found")
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
+    main()
