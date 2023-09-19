@@ -1,16 +1,17 @@
 #!/usr/bin/python3
 """
-This script prints the ID of the first State object
-from the database `hbtn_0e_6_usa` with a specified name.
+This script prints the ID of the State object with the name
+passed as an argument from the database hbtn_0e_6_usa.
 """
 
-from sys import argv
-from model_state import State
+import sys
 from sqlalchemy import create_engine
+from model_state import State, Base
 from sqlalchemy.orm import sessionmaker
 
 
 def main():
+<<<<<<< HEAD
     """
     Access the database and retrieve the ID of the
     specified state from the database.
@@ -39,4 +40,3 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
