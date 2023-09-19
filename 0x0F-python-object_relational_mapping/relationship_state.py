@@ -1,26 +1,24 @@
 #!/usr/bin/python3
-"""
-This script defines a State class and
-a Base class to work with MySQLAlchemy ORM.
-"""
-
-from sqlalchemy import Column, Integer, String
+"""file that contains the class definition of a
+State and an instance Base = declarative_base()"""
+import sqlalchemy
+from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.orm import relationship
-from sqlalchemy.ext.declarative import declarative_base
 
-Base = declarative_base()
+Base = sqlalchemy.orm.declarative_base()
+
+"""class State that inherits from Base"""
 
 
 class State(Base):
-    """State class
-    Attributes:
-        __tablename__ (str): The table name of the class
-        id (int): The State id of the class
-        name (str): The State name of the class
-        cities (:obj:`City`): The Cities belongs to State
-    """
-    __tablename__ = 'states'
+    """Represents a state for a MySQL database.
 
-    id = Column(Integer, primary_key=True)
+    __tablename__ :name of the MySQL table to store States.
+    id: state's id.
+    name: state's name.
+    """
+    __tablename__ = "states"
+    id = Column(Integer, autoincrement=True,
+                primary_key=True, unique=True, nullable=False)
     name = Column(String(128), nullable=False)
-    cities = relationship("City", backref="state", cascade="all, delete")
+    cities = relationship("City", cascade="all, delete", backref="state")
