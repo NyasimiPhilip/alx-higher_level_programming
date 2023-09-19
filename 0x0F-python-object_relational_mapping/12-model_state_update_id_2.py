@@ -6,6 +6,7 @@ from sqlalchemy import create_engine
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 
+
 def main():
     if len(sys.argv) != 4:
         print("Usage: python script.py <db_user> <db_password> <db_name>")
@@ -30,6 +31,7 @@ def main():
 
     # Commit the changes to the database
     session.commit()
+
 
 if __name__ == '__main__':
     main()
