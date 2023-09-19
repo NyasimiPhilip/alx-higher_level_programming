@@ -13,7 +13,7 @@ if __name__ == "__main__":
     dbName = sys.argv[3]
 
     # Connect to our MySQL database
-    db = MySQLdb.connect(host='localhost',user=dbUser, passwd=pswd, db=dbName)
+    db = MySQLdb.connect(host='localhost', user=dbUser, passwd=pswd, db=dbName)
 
     cur = db.cursor()
 
