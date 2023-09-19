@@ -39,8 +39,7 @@ def main():
         for row in rows_selected:
             print(row)
     else:
-        break
-
+        print("")
     # Close the database connection to free up resources
     db_connect.close()
 
