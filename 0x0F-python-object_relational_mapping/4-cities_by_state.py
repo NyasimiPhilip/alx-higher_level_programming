@@ -39,7 +39,7 @@ def main():
         for row in rows_selected:
             print(row)
     else:
-        print("No cities found in the database.")
+        print("")
 
     # Close the database connection to free up resources
     db_connect.close()
