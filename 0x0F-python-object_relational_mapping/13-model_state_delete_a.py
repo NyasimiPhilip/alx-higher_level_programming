@@ -27,8 +27,8 @@ def main():
 
     # Query and delete states with 'a' in their name
     states = session.query(State)\
-    .filter(State.name.like('%a%'))\
-    .order_by(State.id.asc())
+        .filter(State.name.like('%a%'))\
+        .order_by(State.id.asc())
 
     for state in states:
         session.delete(state)
