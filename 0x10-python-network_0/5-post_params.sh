@@ -1,4 +1,3 @@
 #!/bin/bash
-# Send a POST request with the specified parameters and display the response body.
-curl -s -X POST -d "email=test@gmail.com&subject=I will always be here for PLD" "$1"
-echo ""
+# script to post to the entered url
+CURL -sX POST "email=test@gmail.com&subject=I will always be here for PLD" "$1"
