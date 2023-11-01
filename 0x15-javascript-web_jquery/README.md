@@ -1,8 +1,6 @@
 <h1>Javascript - Web JQuery</h1>
   <p>This was the preparatory project learning how to manipulate the DOM with jQuery before implementing it into our HolbertonBnB project.</p>
 
-  <h2>Tests ✔️</h2>
-  <p>tests: Folder of HTML files for testing DOM manipulation scripts.</p>
 
   <h2>Tasks 📃</h2>
   <ol>
