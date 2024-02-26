@@ -86,7 +86,7 @@
         </li>
         <li>
             <h3>ByteCode -&gt; Python #1</h3>
-            <p>102-magic_calculation.py: Python function matching exactly a bytecode provided by Holberton School.</p>
+            <p>102-magic_calculation.py: Python function matching exactly  provided bytecode</p>
         </li>
     </ol>
 </body>
