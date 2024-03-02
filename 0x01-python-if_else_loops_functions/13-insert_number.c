@@ -1,7 +1,3 @@
-/*
- * File: 13-insert_number.c
- * Auth: Brennan D Baraban
- */
 #include "lists.h"
 /**
  * insert_node - Inserts a number into a sorted singly-linked list.
