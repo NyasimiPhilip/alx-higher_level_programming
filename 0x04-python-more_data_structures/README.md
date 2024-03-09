@@ -1,9 +1,6 @@
 <h1>Python Project</h1>
   <p>In this project, I began practicing using the interpreter, printing text and variables, and indexing and slicing strings in Python.</p>
   
-  <h2>Tests ✔️</h2>
-  <p>tests: Folder of test files. Provided by Holberton School.</p>
-  
   <h2>Function Prototypes 💾</h2>
   <p>Prototypes for functions written in this project:</p>
   <table>
