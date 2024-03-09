@@ -1,97 +1,229 @@
-<h1>Python Project</h1>
-  <p>In this project, I began practicing using the interpreter, printing text and variables, and indexing and slicing strings in Python.</p>
-  
-  <h2>Function Prototypes 💾</h2>
-  <p>Prototypes for functions written in this project:</p>
-  <table>
-    <tr>
-      <th>File</th>
-      <th>Prototype</th>
-    </tr>
-    <tr>
-      <td>10-check_cycle.c</td>
-      <td>int check_cycle(listint_t *list);</td>
-    </tr>
-    <tr>
-      <td>102-magic_calculation.py</td>
-      <td>def magic_calculation(a, b):</br></br></td>
-    </tr>
-  </table>
-  
-  <h2>Tasks 📃</h2>
-  <ol>
-    <li>
-      <h3>Run Python File</h3>
-      <p>0-run: Bash script that runs a Python script file saved in the environment variable $PYFILE.</p>
-    </li>
-    <li>
-      <h3>Run inline</h3>
-      <p>1-run_inline: Bash script that runs Python code saved in the environment variable $PYCODE.</p>
-    </li>
-    <li>
-      <h3>Hello, print</h3>
-      <p>2-print.py: Python script that prints exactly "Programming is like building a multilingual puzzle, followed by a new line using the function print.</p>
-    </li>
-    <li>
-      <h3>Print integer</h3>
-      <p>3-print_number.py: Python script that prints the integer stored in the variable number, followed by Battery street, followed by a new line.</p>
-      <p>Completion of this source code.</p>
-    </li>
-    <li>
-      <h3>Print float</h3>
-      <p>4-print_float.py: Python script that prints the float stored in the variable number with a precision of two digits.</p>
-      <p>Completion of this source code.</p>
-    </li>
-    <li>
-      <h3>Print string</h3>
-      <p>5-print_string.py: Python script that prints a string stored in the variable str three times, then a new line, then the first nine characters contained in str, followed by another new line.</p>
-      <p>Completion of this source code.</p>
-    </li>
-    <li>
-      <h3>Play with strings</h3>
-      <p>6-concat.py: Python script that prints Welcome to Holberton School! using the variables str1 = "Holberton" and str2 = "School".</p>
-      <p>Completion of this source code.</p>
-    </li>
-    <li>
-      <h3>Copy - Cut - Paste</h3>
-      <p>7-edges.py: Python script that sets three string variables based on the string contained in the variable word as follows:</p>
-      <ul>
-        <li>word_first_3: Contains the first three letters of the variable word.</li>
-        <li>word_last_2: Contains the last two letters of the variable word.</li>
-        <li>middle_word: Contains the value of the variable word without the first and last letters.</li>
-      </ul>
-      <p>Completion of this source code.</p>
-    </li>
-    <li>
-      <h3>Create a new sentence</h3>
-      <p>8-concat_edges.py: Python script that prints object-oriented programming with Python, followed by a new line without creating new variables or string literals.</p>
-      <p>Completion of this source code.</p>
-    </li>
-    <li>
-      <h3>Easter Egg</h3>
-      <p>9-easter_egg.py: Python script that prints "The Zen of Python" by Tim Peters, followed by a new line.</p>
-    </li>
-    <li>
-      <h3>Linked list cycle</h3>
-      <p>10-check_cycle.c: C function that checks if a linked list contains a cycle.</p>
-      <p>Returns 0 if there is no cycle and 1 if there is.</p>
-      <p>Helper files:</p>
-      <ul>
-        <li>linked_lists.c: C functions handling linked lists for testing 10-check_cycle.c (provided by Holberton School).</li>
-        <li>lists.h: Header file containing definitions and prototypes for all types and functions used in linked_lists.c and 10-check_cycle.c.</li>
-      </ul>
-    </li>
-    <li>
-      <h3>Hello, write</h3>
-      <p>100-write.py: Python script that prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, followed by a new line to stderr using the function write from the sys module.</p>
-      <p>Exits with a status code of 1.</p>
-    </li>
-    <li>
-      <h3>Compile</h3>
-      <p>101-compile: Python script that compiles a Python script file stored in the environment variable $PYFILE and saves it to an output file $PYFILEc (ex. export PYFILE=my_main.py => output filename: my_main.pyc).</p>
-    </li>
-    <li>
-      <h3>ByteCode -&gt; Python #1</h3>
-      <p>102-magic_calculation.py: Python function matching exactly a bytecode provided by Holberton School.</p>
-    </li>
-  </ol>
+ <h1>Python - More Data Structures: Set, Dictionary</h1>
+    <p>In this project, I learned about sets and dictionaries in Python. I practiced using them with the lambda, map, filter, and reduce methods.</p>
+    <h2>Tests ✔️</h2>
+    <p>tests: Folder of test files. Provided by Holberton School.</p>
+    <h2>Function Prototypes 💾</h2>
+    <p>Prototypes for functions written in this project:</p>
+    <table>
+        <tr>
+            <th>File</th>
+            <th>Prototype</th>
+        </tr>
+        <tr>
+            <td>0-square_matrix_simple.py</td>
+            <td>def square_matrix_simple(matrix=[]):</td>
+        </tr>
+        <tr>
+            <td>1-search_replace.py</td>
+            <td>def search_replace(my_list, search, replace):</td>
+        </tr>
+        <tr>
+            <td>2-uniq_add.py</td>
+            <td>def uniq_add(my_list=[]):</td>
+        </tr>
+        <tr>
+            <td>3-common_elements.py</td>
+            <td>def common_elements(set_1, set_2):</td>
+        </tr>
+        <tr>
+            <td>4-only_diff_elements.py</td>
+            <td>def only_diff_elements(set_1, set_2):</td>
+        </tr>
+        <tr>
+            <td>5-number_keys.py</td>
+            <td>def number_keys(a_dictionary):</td>
+        </tr>
+        <tr>
+            <td>6-print_sorted_dictionary.py</td>
+            <td>def print_sorted_dictionary(a_dictionary):</td>
+        </tr>
+        <tr>
+            <td>7-update_dictionary.py</td>
+            <td>def update_dictionary(a_dictionary, key, value):</td>
+        </tr>
+        <tr>
+            <td>8-simple_delete.py</td>
+            <td>def simple_delete(a_dictionary, key=""):</td>
+        </tr>
+        <tr>
+            <td>9-multiply_by_2.py</td>
+            <td>def multiply_by_2(a_dictionary):</td>
+        </tr>
+        <tr>
+            <td>10-best_score.py</td>
+            <td>def best_score(a_dictionary):</td>
+        </tr>
+        <tr>
+            <td>11-mutiply_list_map.py</td>
+            <td>def mutiply_list_map(my_list=[], number=0):</td>
+        </tr>
+        <tr>
+            <td>12-roman_to_int.py</td>
+            <td>def roman_to_int(roman_string):</td>
+        </tr>
+        <tr>
+            <td>100-weight_average.py</td>
+            <td>def weight_average(my_list=[]):</td>
+        </tr>
+        <tr>
+            <td>101-square_matrix_map.py</td>
+            <td>def square_matrix_map(matrix=[]):</td>
+        </tr>
+        <tr>
+            <td>102-complex_delete.py</td>
+            <td>def complex_delete(a_dictionary, value):</td>
+        </tr>
+        <tr>
+            <td>103-python.c</td>
+            <td>void print_python_list(PyObject *p);<br>void print_python_bytes(PyObject *p);</td>
+        </tr>
+    </table>
+    <h2>Tasks 📃</h2>
+    <ol>
+        <li>
+            <h3>Squared simple</h3>
+            <p><code>0-square_matrix_simple.py</code>: Python function that computes the square value of all integers of a matrix.</p>
+            <ul>
+                <li>The parameter matrix is a two-dimensional array.</li>
+                <li>Returns a matrix of the same size as matrix where each value is the square of the input value.</li>
+                <li>The initial matrix is not modified.</li>
+                <li>Without importing modules.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Search and replace</h3>
+            <p><code>1-search_replace.py</code>: Python function that replaces all occurrences of an element by another in a new list.</p>
+            <ul>
+                <li>The parameter my_list is the initial list.</li>
+                <li>The parameter search is the element to replace in the list.</li>
+                <li>The parameter replace is the new element.</li>
+                <li>Without importing modules.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Unique addition</h3>
+            <p><code>2-uniq_add.py</code>: Python function that adds all unique integers in a list (once for each integer).</p>
+            <ul>
+                <li>Without importing modules.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Present in both</h3>
+            <p><code>3-common_elements.py</code>: Python function that returns a set of common elements in two sets.</p>
+            <ul>
+                <li>Without importing modules.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Only differents</h3>
+            <p><code>4-only_diff_elements.py</code>: Python function that returns a set of all elements present in only one set.</p>
+            <ul>
+                <li>Without importing modules.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Number of keys</h3>
+            <p><code>5-number_keys.py</code>: Python function that returns the number of keys in a dictionary.</p>
+            <ul>
+                <li>Without importing modules.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Print sorted dictionary</h3>
+            <p><code>6-print_sorted_dictionary.py</code>: Python function that prints a dictionary by ordered keys.</p>
+            <ul>
+                <li>The function assumes all keys are strings.</li>
+                <li>Keys are printed in alphabetic order.</li>
+                <li>Keys are only sorted on the first level.</li>
+                <li>Dictionary values can have any type.</li>
+                <li>Without importing modules.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Update dictionary</h3>
+            <p><code>7-update_dictionary.py</code>: Python function that replaces or adds key/value pairs in a dictionary.</p>
+            <ul>
+                <li>The parameter key is always a string.</li>
+                <li>The parameter value is any type.</li>
+                <li>If a key exists in the dictionary, the value is replaced.</li>
+                <li>If a key does not exist in the dictionary, it is created.</li>
+                <li>Without importing modules.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Simple delete by key</h3>
+            <p><code>8-simple_delete.py</code>: Python function that deletes a key in a dictionary.</p>
+            <ul>
+                <li>The parameter key is always a string.</li>
+                <li>If the key does not exist, the dictionary does not change.</li>
+                <li>Without importing modules.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Multiply by 2</h3>
+            <p><code>9-multiply_by_2.py</code>: Python function that returns a new dictionary with all values multiplied by 2.</p>
+            <ul>
+                <li>The function assumes all values are integers.</li>
+                <li>Without importing modules.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Best score</h3>
+            <p><code>10-best_score.py</code>: Python function that returns a key value with the biggest integer value.</p>
+            <ul>
+                <li>The function assumes all values are integers.</li>
+                <li>The function assumes all students have a different score.</li>
+                <li>If no score is found, the function returns None.</li>
+                <li>Without importing modules.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Multiply by using map</h3>
+            <p><code>11-mutiply_list_map.py</code>: Python function that returns a list with all values multiplied by a number using map.</p>
+            <ul>
+                <li>Returns a new length of the same length has my_list with each value multiplied by number.</li>
+                <li>The initial list is not modified.</li>
+                <li>Without using loops or importing modules.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Roman to Integer</h3>
+            <p><code>12-roman_to_int.py</code>: Python function that converts a roman numeral to an integer.</p>
+            <ul>
+                <li>The function assumes the number will be between 1-3999.</li>
+                <li>If the parameter roman_string is not a string or None, the function returns 0.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Weighted average!</h3>
+            <p><code>100-weight_average.py</code>: Python function that returns the weighted average of all integers in a list of tuples.</p>
+            <ul>
+                <li>Tuple format: (&lt;score&gt;, &lt;weight&gt;).</li>
+                <li>If the list is empty - returns 0.</li>
+                <li>Without importing modules.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Squared by using map</h3>
+            <p><code>101-square_matrix_map.py</code>: Python function that computes the square value of all integers of a matrix using map.</p>
+            <ul>
+                <li>The parameter matrix is a two-dimensional array.</li>
+                <li>Returns a new matrix of the same size as matrix with each value squared.</li>
+                <li>The initial matrix is not modified.</li>
+                <li>Without using loops or importing modules.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Delete by value</h3>
+            <p><code>102-complex_delete.py</code>: Python function that deletes keys with a specific value in a dictionary.</p>
+            <ul>
+                <li>If the value does not exist, the dictionary is not changed.</li>
+                <li>All keys having the searched value are deleted.</li>
+                <li>Without importing modules.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>CPython #1: PyBytesObject</h3>
+            <p><code>103-python.c</code>: C functions that print basic information about Python lists and Python bytes objects.</p>
+        </li>
+    </ol>
