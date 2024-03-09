@@ -1,8 +1,6 @@
  <h1>Python - More Data Structures: Set, Dictionary</h1>
     <p>In this project, I learned about sets and dictionaries in Python. I practiced using them with the lambda, map, filter, and reduce methods.</p>
-    <h2>Tests ✔️</h2>
-    <p>tests: Folder of test files. Provided by Holberton School.</p>
-    <h2>Function Prototypes 💾</h2>
+   <h2>Function Prototypes 💾</h2>
     <p>Prototypes for functions written in this project:</p>
     <table>
         <tr>
@@ -222,8 +220,4 @@
                 <li>Without importing modules.</li>
             </ul>
         </li>
-        <li>
-            <h3>CPython #1: PyBytesObject</h3>
-            <p><code>103-python.c</code>: C functions that print basic information about Python lists and Python bytes objects.</p>
-        </li>
-    </ol>
+           </ol>
