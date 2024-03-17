@@ -1,12 +1,6 @@
 <h1>Python - Classes and Objects</h1>
 
 <p>In this project, I began practicing object-oriented programming using classes and objects in Python. I learned about attributes, methods, and properties as well as data abstraction, data encapsulation, and information hiding.</p>
-
-<h2>Tests ✔️</h2>
-<ul>
-    <li>tests: Folder of test files. Provided by Holberton School.</li>
-</ul>
-
 <h2>Tasks 📃</h2>
 
 <ol>
