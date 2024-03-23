@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Real Definition of a rectangle
+Real Definition of a rectangle.
 """
 
 
