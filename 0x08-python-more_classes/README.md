@@ -1,5 +1,5 @@
   <h1>Python - More Classes and Objects</h1>
-    <p>In this project, I continued to practice object-oriented programming in Python. I learned about class methods, static methods, class vs instance attributes, and how to use the special <code>__str__</code> and <code>__repr__</code> methods.</p>
+    <p>This project focuses on object-oriented programming in Python associated class methods, static methods, class vs instance attributes, and how to use the special <code>__str__</code> and <code>__repr__</code> methods.</p>
     <h2>Tests ✔️</h2>
     <p>tests: Folder of test files. Provided by Holberton School.</p>
     <h2>Tasks 📃</h2>
